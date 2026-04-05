@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# regexcite
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of regexcite is to make regular expressions more exciting! It provides convenience functions to make some common tasks with string manipulation and regular expressions a bit easier.
+
+## Installation
+
+You can install the development version of regexcite from [GitHub](https://github.com/) with:
+``` r
+# install.packages("devtools")
+devtools::install_github("nshack99/regexcite")
+```
+
+## Example
+
+A common task when dealing with strings is splitting a single string into many parts:
+```{r example}
+library(regexcite)
+
+x <- "alfa,bravo,charlie,delta"
+str_split_one(x, pattern = ",")
+```
+
+You can also use the `n` argument to limit the number of splits:
+```{r}
+str_split_one(x, pattern = ",", n = 2)
+```
